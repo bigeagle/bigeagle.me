@@ -1,0 +1,22 @@
+---
+layout: post
+title: "入手Wacom Bamboo CTL470"
+date: 2012-09-18 18:17
+comments: true
+tags: [life, linux, tips]
+---
+
+前两天画瘾大发，于是一冲动就入了个Wacom Bamboo CTL470，为什么选这个？ -- 因为 *便宜*! 550软妹币搞定。
+
+这一款数位笔是非常非常基础的配置，功能上其实就只是个压感笔，而且感应范围只有 4x6 英寸，不过用起来感觉也还不错。 压感方面体验很自然，很舒服～ 没有橡皮擦这一点略感功能欠缺，不过也不算大碍。
+
+Archlinux下装上 `xf86-input-wacom`, `wacom-udev`，`libwacom` 即可驱动，KDE下装上`kcm-wacomtablet`还可以在GUI里配置，可以说是开箱即用。
+
+比较令人郁闷的是`krita`对其压感还不支持，这有点让我意外和遗憾，不过幸好我们也还有`MyPaint`可以用，画些简单的画足够用了。
+
+好久不画画手有些生了，用了一个晚上时间画了个学姐，求轻拍。（内有亮点）
+
+<!--more-->
+
+{% img center /images/mami.png %}
+
