@@ -77,7 +77,10 @@ exclude_generator:
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
-  type:
+  type: rsync
+  host: xiu.bigeagle.me
+  user: root
+  root: /home/wwwroot/bigeagle.me/
 
 plugins:
   - hexo-generator-feed
