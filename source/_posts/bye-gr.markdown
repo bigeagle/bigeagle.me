@@ -4,7 +4,7 @@ title: 'R.I.P Google Reader'
 date: 2013-6-30
 comments: true
 ---
-{% img center https://dn-bigeagle.qbox.me/google_reader2.png %}
+{% img center https://dn-bigeagle.qbox.me/images/blog/google_reader2.png %}
 大约一个月前转向inoreader了，所以最近30天的阅读量很少。
 
 感谢Google Reader陪我走过的这四年，也就是我完全使用Linux的四年。没记错的话是被 @icaker 同学带入的这个圈子，Linux, Google, Mailing List, Twitter, etc. 
