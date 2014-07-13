@@ -3,7 +3,6 @@ layout: post
 title: 'Hello world！'
 date: 2010-11-26
 wordpress_id: 1
-permalink: hello-world
 comments: true
 ---
 ## 测试一下

@@ -3,7 +3,6 @@ layout: post
 title: 'The Beginning'
 date: 2010-11-26
 wordpress_id: 10
-permalink: the-beginning
 comments: true
 ---
 心头一痒+一热就买了个域名+空间，前后两个小时搞定，效率还行。

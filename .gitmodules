@@ -1,0 +1,3 @@
+[submodule "themes/apollo"]
+	path = themes/apollo
+	url = git@github.com:AthenaYin/hexo-theme-apollo.git

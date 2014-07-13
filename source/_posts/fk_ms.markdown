@@ -4,7 +4,6 @@ title: 'Micro$oft依然是那副老德行'
 date: 2011-9-28
 wordpress_id: 248
 dq_id: '248 http://bigeagle.me/?p=248'
-permalink: fk_ms
 comments: true
 ---
 最近微软又火了一把，Windows 8发布，Windows Phone走向成熟，新一代的开发平台，无论是用户还是开发者都很<a href="http://www.36kr.com/p/49358.html" target="_blank">关注</a>。

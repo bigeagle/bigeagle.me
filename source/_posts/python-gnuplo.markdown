@@ -3,7 +3,6 @@ layout: post
 title: 'Python 调用gnuplot的例子'
 date: 2010-11-26
 wordpress_id: 16
-permalink: python-gnuplo
 comments: true
 tags: [python, programming]
 ---

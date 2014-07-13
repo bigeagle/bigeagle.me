@@ -3,7 +3,6 @@ layout: post
 title: '5月11日活动有感'
 date: 2011-5-12
 wordpress_id: 175
-permalink: may11xdlinu
 comments: true
 ---
 5月11日开源社区的活动，这么多年来第一次这么有感觉。

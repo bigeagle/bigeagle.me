@@ -4,7 +4,6 @@ title: '利用tmpfs加速gnome-shell overview模式Applications索引'
 date: 2011-7-29
 wordpress_id: 226
 dq_id: '226 http://bigeagle.me/?p=226'
-permalink: gnome_shell_app
 comments: true
 tags: [linux, desktop, tips]
 ---

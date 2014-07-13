@@ -4,7 +4,6 @@ title: '用PulseAudio TCP Forwarding实现网络传声'
 date: 2011-8-12
 wordpress_id: 243
 dq_id: '243 http://bigeagle.me/?p=243'
-permalink: pulseaudio-tcp
 comments: true
 tags: [linux, pulseaudio, tips]
 ---
