@@ -3,4 +3,4 @@
 	url = git@github.com:iissnan/hexo-theme-next.git
 [submodule "themes/apollo"]
 	path = themes/apollo
-	url = git@github.com:joyceim/hexo-theme-apollo.git
+	url = git@github.com:bigeagle/hexo-theme-apollo.git
