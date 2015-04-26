@@ -84,6 +84,15 @@ disqus_shortname: bigeagle
 theme: apollo
 exclude_generator:
 
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: false
+  smartLists: true
+  smartypants: true
+
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
