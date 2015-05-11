@@ -17,6 +17,8 @@ trackpoint 的加速参数了。
 
 可是我等不及啊老湿！而且怎么设置参数阿根本找不到在哪里调好不好！
 
+<!-- more -->
+
 于是找到[这里](http://who-t.blogspot.com/2014/12/building-a-dpi-database-for-mice.html)，读完发现，原来 libinput 是会通过 udev 的 hwdb 读取
 特定硬件的参数调整，这个第一感觉好麻烦，不能像 xset 那样直接调整，第二感觉就很科学，因为不同鼠标 DPI 不一样，过去每次我把 usb 鼠标插上之后，
 都要再把光标速度手动调慢，而用了 libinput 之后就没这个问题了。
