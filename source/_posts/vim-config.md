@@ -160,8 +160,8 @@ source ~/.vim/config/syntastic.vim
 以下所有插件名，例如 `rking/ag.vim` 改成 `Plugin 'rking/ag.vim'` 的形式放在 vimrc 的插件段，即可安装使用。粗体的为强烈推荐安装。
 
 * rking/ag.vim 使用 SilverSearcher 搜索代码，比 grep 速度快，稳准狠
-* **kien/ctrlp.cim** 使用模糊匹配搜索/打开文件，非常好用，强烈推荐
-* **Vggdroot/indentLine** 编辑 python 等用空格缩进的文件时，显示缩进标记线
+* **kien/ctrlp.vim** 使用模糊匹配搜索/打开文件，非常好用，强烈推荐
+* **Yggdroot/indentLine** 编辑 python 等用空格缩进的文件时，显示缩进标记线
 * **Valloric/YouCompleteMe** 极其强大的自动补全、C/C++/C#代码分析器
 * **jlanzarotta/bufexplorer** 快速打开历史编辑过的文件
 * mattn/emmet-vim 曾叫 ZenCoding，对 HTML/XML 编辑很有用
@@ -169,7 +169,7 @@ source ~/.vim/config/syntastic.vim
 * **scrooloose/nerdtree** 截图中左侧文件列表
 * **scrooloose/syntastic** 语法检查器，非常有用
 * klen/python-mode 对 python 程序员，强烈推荐
-* **kain/rainbow_parentheses.vim** 使用不同颜色标记各级括号，非常好
+* **kien/rainbow_parentheses.vim** 使用不同颜色标记各级括号，非常好
 * **majutsushi/tagbar** 截图中左侧的类/函数/方法列表
 * SirVer/ultisnips 和 honza/vim-snippets : 一些 snippets，省时省力，只是常常记不住
 * **bling/vim-airline** 截图中下方非常漂亮的状态栏
