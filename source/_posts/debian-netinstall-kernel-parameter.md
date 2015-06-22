@@ -1,14 +1,14 @@
 title: Debian 网络安装内核参数
 date: 2015-06-22 20:50:23
-tags: [linux, debian, ubuntu, tip]
+tags: [linux, tips]
 ---
 
 短文备忘。
 
-Debian 系网络安装同股票 preseed 实现自动化，类似于 Red Hat 系的 kickstart。
+Debian 系网络安装使用 preseed 实现自动化，类似于 Red Hat 系的 kickstart。
 preseed 的参数不一定需要通过 preseed 文件设定，可以直接通过 kernel cmdline 设置。
 
-比如 Debian 设置 apt mirrors 的时候，安装时不能改 debian-security 的 mirror，就可以通过 preseed 参数设置。
+比如 Debian 安装时设置 apt mirrors 的时候，不能改 debian-security 的 mirror，就可以通过 preseed 参数设置。
 
 参考我的 U 盘中 grub2 的 ubuntu 安装部分:
 
