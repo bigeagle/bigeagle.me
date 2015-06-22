@@ -62,33 +62,19 @@ $ ln -s ~/.vim/vimrc ~/.vimrc  # 把 vimrc 本体放在 ~/.vim/ 中，方便管�
 ```
 
 过去的 vim 插件安装方式是一股脑全部装在 `~/.vim` 里，插件多了之后管理起来极其困难。好在后来有了 pathogen，以及衍生出来的 vundle 等等，
-目前 vim 的插件管理已经非常轻松了。我使用 [Vundle](https://github.com/gmarik/Vundle.vim) 作为插件管理器。
+目前 vim 的插件管理已经非常轻松了。我使用 <s>[Vundle](https://github.com/gmarik/Vundle.vim)</s> [vim-plug](https://github.com/junegunn/vim-plug) 
+作为插件管理器，比起 vundle 功能更全面，且支持并行下载。
 
-## 安装 Vundle
+## 安装 vim-plug 
 
-由于 Vim 并不自带插件管理，因此我们要手动安装配置。Vundle 的安装很简单，首先
+由于 Vim 并不自带插件管理，因此我们要手动安装配置。vim-plug  的安装很简单，首先把 `plug.vim` 下载了放在 `~/.vim/autoload/` 下
 
-```
-$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
-然后确保 `~/.vimrc` 中的头几行是:
-
-```vim
-set nocompatible   " 必须, 关闭 vi 兼容模式
-filetype off        " 必须
-
-" 设置 Runtime Path，供 Vundle 初始化
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" 或者也可以使用别的路径
-" call vundle#begin('~/some/path/here')
-
-" 让 Vundle 管理 Vundle，必须
-Plugin 'gmarik/Vundle.vim'
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-这样 Vundle 就装好了。
+就好了。
 
 ## 文件结构
 
@@ -111,24 +97,23 @@ Plugin 'gmarik/Vundle.vim'
 vimrc 大概会长成这样
 
 {% codeblock lang:vim %}
-""""
-" Vundle 初始化部分
-""""
+call plug#begin('~/.vim/bundle') " vim-plug 初始化
 
 """
 " 插件列表
 """
 
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Yggdroot/indentLine'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'Valloric/YouCompleteMe'
+" 必须使用单引号
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/YouCompleteMe'
 
 " 还有好多插件
 
 " 结束插件列表
-call vundle#end()
+call plug#end()
 
 
 " Vim 基础配置部分
@@ -177,7 +162,7 @@ source ~/.vim/config/syntastic.vim
 * lervag/vim-latex $\LaTeX$ 编辑必备
 * **jrosiek/vim-mark** 阅读代码必备，给单词加 mark 高亮
 
-写完插件列表之后，打开 vim 然后 `:PluginInstall` 即可完成插件下载、安装，有些插件（如 YouCompleteMe) 需要进一步安装的，请查看插件文档。
+写完插件列表之后，打开 vim 然后 `:PlugInstall` 即可完成插件下载、安装，有些插件（如 YouCompleteMe) 需要进一步安装的，请查看插件文档。
 
 插件的配置，一般插件文档写得很详细，我就不多说了。
 
@@ -188,4 +173,8 @@ source ~/.vim/config/syntastic.vim
 根据自己的需求做一些调整。
 
 以上。
+
+# Revision
+
+- 2015.06.22 抛弃 Vundle，转向 vim-plug
 
