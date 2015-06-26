@@ -4,6 +4,14 @@ date: 2015-04-27 00:21:13
 tags:
 ---
 
+** Update **
+
+Systemd 221 之后 已经有 trackpoint 的 hwdb 了，libinput 也支持 trackpoint 加速，我现在的配置是
+```
+evdev:name:*DualPoint Stick:dmi:bvn*:bvr*:bd*:svnDellInc.:pnLatitudeE7440*:pvr*
+  POINTINGSTICK_CONST_ACCEL=2
+```
+** Update End **
 
 近期 Arch Linux 升上了 Gnome 3.16，Wayland 相关组件开始大量启用，比如 GDM 默认使用 Wayland，Xorg 默认使用 libinput 替代 evdev 等。
 
