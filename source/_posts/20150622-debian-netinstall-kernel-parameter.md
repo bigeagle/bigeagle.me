@@ -1,3 +1,4 @@
+---
 title: Debian 网络安装内核参数
 date: 2015-06-22 20:50:23
 tags: [linux, tips]
