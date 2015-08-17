@@ -106,7 +106,7 @@ chroot到新安装的基本系统中，chroot就是进入某个目录，把它�
 
 然后运行`# locale-gen`
 
-再编辑`/etc/locale.con`，里面写上
+再编辑`/etc/locale.conf`，里面写上
 
     LANG="en_US.UTF-8"
 
