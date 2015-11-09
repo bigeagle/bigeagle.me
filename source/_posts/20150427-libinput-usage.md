@@ -6,11 +6,33 @@ tags:
 
 ** Update **
 
+Libinput 0.19 至今，针对指点杆的配置都是开发者自认为的「自适应」配置，在我的设备上
+加速度非常非常非常不够，开发者则是一副自己很懂的样子。
+
+https://bugs.freedesktop.org/show_bug.cgi?id=91369
+
+于是我只好把 libinput patch 掉了
+
+```patch
+--- a/src/filter.c
++++ b/src/filter.c
+@@ -720,7 +720,7 @@ trackpoint_accel_profile(struct motion_filter *filter,
+        else if (speed_in < threshold)
+                factor = 1;
+        else
+-               factor = incline * v_us2ms(speed_in - threshold) + 1;
++               factor = incline * v_us2ms(speed_in - threshold)/dpi_factor + 1;
+ 
+        factor = min(max_accel, factor);
+```
+
+** Update **
+
 Systemd 221 之后 已经有 trackpoint 的 hwdb 了，libinput 也支持 trackpoint 加速，我现在的配置是
-```
-evdev:name:*DualPoint Stick:dmi:bvn*:bvr*:bd*:svnDellInc.:pnLatitudeE7440*:pvr*
-  POINTINGSTICK_CONST_ACCEL=2
-```
+
+	evdev:name:*DualPoint Stick:dmi:bvn*:bvr*:bd*:svnDellInc.:pnLatitudeE7440*:pvr*
+	  POINTINGSTICK_CONST_ACCEL=2
+
 ** Update End **
 
 近期 Arch Linux 升上了 Gnome 3.16，Wayland 相关组件开始大量启用，比如 GDM 默认使用 Wayland，Xorg 默认使用 libinput 替代 evdev 等。
