@@ -97,9 +97,9 @@ marked:
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
   type: rsync
-  host: xiu.bigeagle.me
+  host: vps3.bigeagle.me
   user: root
-  root: /home/wwwroot/bigeagle.me/
+  root: /home/www/bigeagle.me/
 
 plugins:
   - hexo-generator-feed
