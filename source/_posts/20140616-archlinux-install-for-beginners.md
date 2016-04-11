@@ -158,13 +158,15 @@ chroot到新安装的基本系统中，chroot就是进入某个目录，把它�
 在`/etc/pacman.conf`里加入
 
 ```ini
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
+[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
 然后 
-    # pacman -Sy yaourt
+    # pacman -Sy archlinuxcn-keyring yaourt
+
+这里添加的 ArchLinuxCN 源是 archlinuxcn.org 的第三方源，包括了不少常用软件。
 
 ### 做出选择
 现在，你可以选择简单模式，还是Hard模式。
@@ -213,17 +215,17 @@ Server = http://repo.archlinux.fr/$arch
 * `xfce4-terminal`: 我推荐的终端模拟器
 * `tmux`: 你懂的
 * `nautilus`或`pcmanfm`或`nemo`: 文件管理器
-* `dmenu-xft`: 启动器
+* `rofi`: 启动器
 * `compton`: 开透明什么的需要
 * `pnmixer`: 调音量
 * `gthumb`: 看图
-* `gnome-screenshot`: 截图
+* `gnome-screenshot`, `deepin-screenshot`: 截图
 * `lxappearence`: 设置主题、外观
 * `numix-theme`, `numix-circle-icon-theme-git`: 我喜欢的主题和图标，装完用lxappearence设置生效
 * `nitrogen`: 设置壁纸
 * `conky`: 系统状态监视
 * `xfce4-power-manager`: 电源管理
-* `xfce4-notifyd`: 桌面通知
+* `mate-notification-daemon`: 桌面通知
 
 还有好多日常软件日后慢慢告诉你...
 
@@ -272,7 +274,7 @@ Server = http://repo.archlinux.fr/$arch
 
 你现在的字体应该还比较难看，装上这些包:
 
-    # pacman -S wqy-microhei ttf-dejavu ttf-droid cantarell-fonts
+    # pacman -S wqy-microhei ttf-dejavu ttf-droid cantarell-fonts adobe-source-han-sans-cn-fonts
 
 你应该还需要写带中文的$\TeX$文档，
 
