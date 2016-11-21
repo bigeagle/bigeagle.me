@@ -1,6 +1,3 @@
-[submodule "themes/next"]
-	path = themes/next
-	url = git@github.com:iissnan/hexo-theme-next.git
-[submodule "themes/apollo"]
-	path = themes/apollo
-	url = git@github.com:bigeagle/hexo-theme-apollo.git
+[submodule "themes/even"]
+	path = themes/even
+	url = https://github.com/ahonn/hexo-theme-even

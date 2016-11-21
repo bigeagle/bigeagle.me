@@ -81,7 +81,7 @@ disqus_shortname: bigeagle
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
 #theme: bigeagle
-theme: apollo
+theme: even
 exclude_generator:
 
 marked:
@@ -97,9 +97,7 @@ marked:
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
   type: rsync
-  host: vps3.bigeagle.me
+  host: bigeagle.me
   user: root
   root: /home/www/bigeagle.me/
 
-plugins:
-  - hexo-generator-feed
