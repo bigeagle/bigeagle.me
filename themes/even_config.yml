@@ -1,0 +1,46 @@
+# navbar
+menu:
+  Home: /
+  Archives: /archives/
+  About: /about/
+  RSS: /atom.xml
+
+# site icon
+favicon: /favicon.png
+
+# theme styling
+# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
+theme:
+  color: Mint Green
+  anchor: "#"
+
+# comments
+comments:
+  post: true
+  about: true
+
+# article contents sidebar
+sidebar: false
+
+# Analytics
+## Baidu Analytics
+# baidu_analytics: Your baidu Analytics ID
+## Google Analytics
+# google_analytics: Your Google Analytics ID
+
+# Comments
+## Duoshuo
+# duoshuo_shortname: Your duoshuo ID
+## Disqus
+disqus_shortname: bigeagle
+
+# Social links
+social:
+  email: 
+  stack-overflow:
+  twitter:
+  facebook:
+  github: 
+  weibo: 
+  zhihu: 
+  rss: /atom.xml
