@@ -5,7 +5,7 @@ slug: ASUS-chromebook-flip
 tags: ["linux", "chromebook", "toy"]
 ---
 
-从很早开始，我就一直想要一个方便携带的生产力工具，在任何我需要的时候，拿出来就能干活的那种；我尝试过随身背着笔记本，奈何Latitude 7440总还是太重，我椎间盘突出的腰受不了；尝试过 termux + 蓝牙键盘，但总还是不够给力。
+从很早开始，我就一直想要一个方便携带的生产力工具，在任何我需要的时候，拿出来就能干活的那种；我尝试过随身背着笔记本，奈何Latitude 7440总还是太重，腰背受不了；尝试过 termux + 蓝牙键盘，但总还是不够给力。
 
 年初在[康哥](http://scateu.me/)的[安利](http://scateu.me/2016/10/09/chromebook-rocks.html)下，购入了 [ASUS Chromebook Flip](https://www.amazon.com/Chromebook-10-1-Inch-Convertible-Touchscreen-Rockchip/dp/B00ZS4HK0Q/ref=sr_1_1?s=pc&ie=UTF8&qid=1474962276&sr=1-1&keywords=chromebook+flip)，Amazon Prime 含税仅需 ￥2060 元，大约十天到货。10.1 英寸的 Flip，基本满足了我的需求:
 
@@ -46,7 +46,7 @@ Flip 内部存储非常小，只有 16GB，我曾想过把 chroot 装到 SD 卡�
 
 ## Shadowsocks
 
-虽然ChromeOS有一个shadowsocks APP，但是不支持 chahca20，因此我用的是 chroot 中 debian sid 仓库里的 shadowsocks-libev。
+虽然ChromeOS有一个shadowsocks APP，但是不支持 chacha20，因此我用的是 chroot 中 debian sid 仓库里的 shadowsocks-libev。
 
 Android 环境中的网络和外面是隔离的，因此需要去 Play 装一个 Android Shadowsocks.
 
