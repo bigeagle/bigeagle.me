@@ -1,0 +1,129 @@
+$blue: #2077b2
+$primary: $blue
+$grey-dark: #42464c
+$family-sans-serif: "Source Han Sans CN", "Noto Sans", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "WenQuanYi Zen Hei", "微软雅黑", "Hiragino Sans GB", sans-serif
+
+@import "node_modules/bulma/bulma"
+
+.container
+  max-width: 800px
+  margin: 0 auto
+
+.content
+  font-size: 16px
+  line-height: 1.75
+
+.media-content
+  .subtitle+.title
+    margin-bottom: 10px
+  .content
+    line-height: 1.5
+
+.hero .nav
+  box-shadow: none
+
+html
+  background-color: transparent
+
+.section
+  padding: 40px 20px
+
+.nav
+  .level-item
+    margin-left: 10px
+  .title
+    font-weight: bold
+
+.subtitle
+  color: #69707a
+
+.title
+  line-height: 1.25
+  font-size: 24px
+  font-weight: normal
+  a
+    color: #222324
+  &.notfound
+    font-size: 20vw
+
+.tags
+  i.fa
+    line-height: 2.5
+
+code
+  color: inherit
+  background-color: transparent
+  font-size: 90%
+
+article+article
+  margin-top: 80px
+
+.content
+  h1, h2, h3, h4, h5, h6
+    line-height: 1.25
+    font-weight: normal;
+    &:not(:first-child)
+      margin-top: 20px
+    &::before
+      color: #aeb1b5
+      font-weight: bold
+    code
+      background-color: #f8f8f8
+  h1
+    font-size: 24px
+    &::before
+      content: "# "
+  h2
+    font-size: 22px
+    &::before
+      content: "## "
+  h3
+    font-size: 20px
+    &::before
+      content: "### "
+  h4
+    font-size: 18px
+    &::before
+      content: "#### "
+  h5
+    font-size: 17px
+    &::before
+      content: "##### "
+  h6
+    font-size: 16px
+    &::before
+      content: "###### "
+  p,
+  ol,
+  ul,
+  pre,
+  table
+    &:not(:last-child)
+      margin-bottom: 1.5em
+  table
+    td,
+    th
+      border: 1px solid #d3d6db
+      padding: 8px 10px
+      vertical-align: top
+  & > code, p > code
+    font-size: 90%
+    padding: 2px 4px
+    margin: 0 2px
+    border: 1px solid #ddd
+    border-radius: 4px
+    background-color: #f8f8f8
+    color: #42464c
+  pre
+    code
+      font-size: 90%
+      padding: 1em
+      line-height: 1.5
+  li
+    pre,
+    table
+      margin-bottom: 1.5em
+
+  figure
+    &.center
+      text-align: center;
