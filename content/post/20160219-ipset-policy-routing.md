@@ -35,8 +35,10 @@ iptables mangle 表打上 mark，再使用 iproute2 的规则(rule)，对该 mar
 
 这个每次重启就会丢失，可以 `ipset save` 导出配置文件，Arch Linux 的 ipset 包还带了 systemd  service，所以
 
-    sudo ipset save | sudo tee /etc/ipset.conf
-    sudo systemctl enable ipset.service
+```bash
+sudo ipset save | sudo tee /etc/ipset.conf
+sudo systemctl enable ipset.service
+```
 
 即可。
 

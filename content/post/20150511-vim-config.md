@@ -98,7 +98,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 vimrc 大概会长成这样
 
-{% codeblock lang:vim %}
+```vim
 call plug#begin('~/.vim/bundle') " vim-plug 初始化
 
 """
@@ -129,7 +129,7 @@ source ~/.vim/config/tagbar.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/syntastic.vim  
 " ....
-{% endcodeblock %}
+```
 
 所以配置文件分为三个部分：
 - 插件列表
@@ -140,7 +140,7 @@ source ~/.vim/config/syntastic.vim
 
 我先把基础配置，带注释发上来，再贴插件列表
 
-{% gist bigeagle/ab159ef3d3d0828436a0 %}
+{{< gist bigeagle ab159ef3d3d0828436a0 >}}
 
 ## 有用的插件
 
