@@ -7,9 +7,9 @@ comments: true
 slug: conky_mpd_cover
 tags: [linux, desktop, tips]
 ---
-{% img right /images/conky.png 145 conky %}
+{{<figure src="/images/conky">}}
 
-昨天回到Openbox了，GNOME3.2扩展不兼容让我这个不搞定不舒服司机的人实在太难受，又不想再去学gjs，所以干脆眼不见为净了。
+昨天回到Openbox了，GNOME 3.2 扩展不兼容让我这个不搞定不舒服司机的人实在太难受，又不想再去学gjs，所以干脆眼不见为净了。
 
 过去在OB下最爱折腾的东西莫过于conky，昨天除了恢复了一下过去的conky配置，就是further折腾… 看conky-colors又出新版本，的确很炫，所以也想把自己的改改，不过实际需求上，估计也就是比较想要一个音乐的CoverArt。
 
