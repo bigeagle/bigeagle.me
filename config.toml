@@ -1,3 +1,29 @@
 languageCode = "zh-CN"
 title = "K.I.S.S"
-baseURL = "https://bigeagle.me/"
+description = "Keep It Simple, Stupid"
+
+baseURL = "https://bigeagle.me"
+theme = 'hemingway2'
+copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2017"
+
+
+disqusShortname = "bigeagle"
+googleAnalytics = ""
+
+disablePathToLower = true
+
+[permalinks]
+post = ":year/:month/:slug/"
+
+[taxcnomies]
+tag = "tags"
+
+[params]
+baseURL = "https://bigeagle.me"
+
+[params.highlight]
+style = "github"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
