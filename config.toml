@@ -25,5 +25,11 @@ baseURL = "https://bigeagle.me"
 style = "github"
 
 [[params.social]]
+url = "/about"
+fa_icon = "fa-user"
+name = "About"
+
+[[params.social]]
 url = "/index.xml"
 fa_icon = "fa-rss"
+name = "RSS"
