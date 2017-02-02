@@ -11,6 +11,7 @@ disqusShortname = "bigeagle"
 googleAnalytics = ""
 
 disablePathToLower = true
+hasCJKLanguage = true
 
 [permalinks]
 post = "/:year/:month/:slug/"
