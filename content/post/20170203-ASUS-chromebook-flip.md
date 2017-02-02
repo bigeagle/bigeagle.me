@@ -91,3 +91,6 @@ Chrome 自带的终端本身并不太好用，比如不支持输入法，同时�
 在 ChromeOS 里使用自带的输入法即可，但是在 chroot 中这个输入法是不能用的。解决办法很简单，在 xiwi 中，运行 fcitx 即可，实测能用，这里不再赘述。
 
 
+p.s. 这篇 blog 也是我在 chromebook 上用 vim 写的。<br />
+p.s.<sup>2</sup> 我把 blog generator 换成了 [hugo](https://gohugo.io/)，受够了向后兼容性极差的 hexo / nodejs，也不想在 chromebook 16GB 的局促空间中装一堆 nodejs 依赖，hugo 不仅一个二进制文件搞定，而且在 ARM 上生成 blog 速度也是飞起。
+
