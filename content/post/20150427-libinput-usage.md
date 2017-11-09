@@ -5,6 +5,24 @@ slug: libinput-usage
 tags:
 ---
 
+**Update 2017.11.10**
+
+Linput 1.9 总算搞定了这个问题，选择采用硬件内建的加速方案，libinput 仅提供简单的线性映射。
+如果需要自己调速度，除了设置 `xinput set-float-prop id=X 'libinput Accel Speed' $speed` 
+之外，更底层的方式是给 libinput 提供一个 `LIBINPUT_ATTR_TRACKPOINT_RANGE` 属性。
+
+通过 
+    
+    sudo libinput measure trackpoint-range
+
+命令测量出一个硬件提供的 trackpoint 加速范围，并在 hwdb 中写上，例如
+
+    evdev:name:*DualPoint Stick:dmi:bvn*:bvr*:bd*:svnDellInc.:pnLatitudeE7440*:pvr*
+        LIBINPUT_ATTR_TRACKPOINT_RANGE=30
+
+即可；这个值越大，指针速度越慢。
+
+
 **Update**
 
 Libinput 0.19 至今，针对指点杆的配置都是开发者自认为的「自适应」配置，在我的设备上
