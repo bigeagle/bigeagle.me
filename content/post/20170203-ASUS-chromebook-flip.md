@@ -5,6 +5,8 @@ slug: ASUS-chromebook-flip
 tags: ["linux", "chromebook", "toy"]
 ---
 
+**Update 2018-02-10: 我错了，速度实在太慢不给力，已经吃灰半年多。**
+
 从很早开始，我就一直想要一个方便携带的生产力工具，在任何我需要的时候，拿出来就能干活的那种；我尝试过随身背着笔记本，奈何Latitude 7440总还是太重，腰背受不了；尝试过 termux + 蓝牙键盘，但总还是不够给力。
 
 年初在[康哥](http://scateu.me/)的[安利](http://scateu.me/2016/10/09/chromebook-rocks.html)下，购入了 [ASUS Chromebook Flip](https://www.amazon.com/Chromebook-10-1-Inch-Convertible-Touchscreen-Rockchip/dp/B00ZS4HK0Q/ref=sr_1_1?s=pc&ie=UTF8&qid=1474962276&sr=1-1&keywords=chromebook+flip)，Amazon Prime 含税仅需 ￥2060 元，大约十天到货。10.1 英寸的 Flip，基本满足了我的需求:
