@@ -4,7 +4,7 @@ description = "Keep It Simple, Stupid"
 
 baseURL = "https://bigeagle.me"
 theme = 'hemingway2'
-copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2017"
+copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2020"
 
 
 disqusShortname = "bigeagle"
@@ -37,3 +37,6 @@ name = "RSS"
 
 [blackfriday]
   smartypants = false
+
+[markup.goldmark.renderer]
+unsafe= true
