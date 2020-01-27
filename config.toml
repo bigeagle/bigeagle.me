@@ -4,14 +4,15 @@ description = "Keep It Simple, Stupid"
 
 baseURL = "https://bigeagle.me"
 theme = 'hemingway2'
-copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2020"
-
+copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a>"
 
 disqusShortname = "bigeagle"
 googleAnalytics = ""
 
 disablePathToLower = true
 hasCJKLanguage = true
+
+buildFuture = true
 
 [permalinks]
 post = "/:year/:month/:slug/"
@@ -34,9 +35,6 @@ name = "About"
 url = "/index.xml"
 fa_icon = "fa-rss"
 name = "RSS"
-
-[blackfriday]
-  smartypants = false
 
 [markup.goldmark.renderer]
 unsafe= true
