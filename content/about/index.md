@@ -6,9 +6,7 @@ I'm a bad programmer.
 
 ## Contact Me
 
-- Email: `gpg --recv-key 15CC6A61738B15990095E256CB67DA7A865BAC3A`
+- Email: `gpg --recv-key 410512A231F391D174BED07F03393A721E7CF75A`
 - GitHub: [bigeagle](http://github.com/bigeagle) 
 - Twitter: [@bigeagle_xd](https://twitter.com/bigeagle_xd)
-- Google+: [+Justin Wong](https://plus.google.com/+JustinWongTHU/posts)
 - Inoreader: [bigeagle](https://www.inoreader.com/u/bigeagle)
-
