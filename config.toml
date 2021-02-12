@@ -3,7 +3,7 @@ title = "K.I.S.S"
 description = "Keep It Simple, Stupid"
 
 baseURL = "https://bigeagle.me"
-copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2021"
+copyright = "<a href=\"https://github.com/bigeagle/bigeagle.me\"> Justin Wong</a>"
 
 disqusShortname = "bigeagle"
 googleAnalytics = ""
@@ -35,8 +35,6 @@ authorName = "Justin Wong" # Author full name
 authorEmail = "" # Author email
 
 [params.info]
-adsense = "" # Adsense ID (ID only, without ca-pub-)
-enableSocial = false # Adds OpenGraph and Twitter cards
 homeTitle = "K.I.S.S" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article

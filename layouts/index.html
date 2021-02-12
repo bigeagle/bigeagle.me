@@ -1,34 +1,35 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-<section class="section">
-  <div class="container">
-    {{- $pages := . -}}
-    {{- if .IsHome -}}
-    {{- $pages = .Site.RegularPages -}}
-    {{- else -}}
-    {{ $pages = .Pages -}}
-    {{- end -}}
-    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-    {{ range sort .Paginator.Pages }}
-    <article>
-      <div class="subtitle tags is-6 is-pulled-right">
-        {{ if .Params.tags }}
-        {{ partial "tags" .Params.tags }}
-        {{ end }}
-      </div>
-      <h2 class="subtitle is-6 date">{{ .Date.Format "January 2, 2006" }}</h2>
+<section class="container" id="blogroll">
+  {{- $pages := . -}}
+  {{- if .IsHome -}}
+  {{- $pages = .Site.RegularPages -}}
+  {{- else -}}
+  {{ $pages = .Pages -}}
+  {{- end -}}
+  {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+  {{ range sort .Paginator.Pages }}
+  <article class="row blog-content">
+    <div class="col text-left date">{{- partial "font-awesome" "calendar" -}}{{ .Date.Format "January 2, 2006" }}</div>
+    <div class="col text-right tags hide-xs">
+      {{ if .Params.tags }}
+      {{ partial "tags" .Params.tags }}
+      {{ end }}
+    </div>
+    <div class="is-full-width"></div>
+    <div class="col">
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <div class="content">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
-        <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+        <a class="read-more" href="{{ .Permalink }}" style="height:28px">
           Read more
         </a>
         {{ end }}
       </div>
-    </article>
-    {{ end }}
-  </div>
+    </div>
+  </article>
+  {{ end }}
 </section>
 {{ partial "pager" . }}
 {{ partial "footer" . }}

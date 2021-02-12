@@ -1,11 +1,13 @@
-<section class="section">
-  <div class="container has-text-centered">
-    <p>{{ .Site.Copyright | safeHTML }}</p>
+<footer class="copy-right">
+  <div class="container">
+    <div class="is-full-width is-center">
+    <p>&copy; {{ .Site.Copyright | safeHTML }} 2010-{{ now.Format "2006" }}</p>
+    </div>
     {{if .Site.Params.Info.poweredby}}
-      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    <div class="is-full-width is-center"><p>Powered by <a href="https://gohugo.io/">Hugo</a>.</div>
     {{ end }}
   </div>
-</section>
+</footer>
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}

@@ -1,14 +1,13 @@
 ---
 title: "About Me"
+layout: aboutme
 ---
 
-![](/images/avatar.jpg)
-
-I'm a research engineer at [Megvii Research](https://megvii.com/). 
+I am a research engineer at [Megvii Research](https://megvii.com/). 
 Previously I was a postdoctoral researcher at [Dept. of CS][DCST], Tsinghua University.
 I received my Ph.D. in Electronic Engineering at [NICS lab][DEE], Tsinghua University in 2017,
 supervised by Prof. [Huazhong Yang][yanghz] and Prof. [Yu Wang][yuwang]. Before that, I received my
-B.S. degree from Xi'dian University. Check my [google scholar profile][gscholar] for my full publication list.
+B.S. degree from Xidian University. Check my [google scholar profile][gscholar] for my full publication list.
 
 My current research interest includes Low-level Computer Vision, Image Signal Processing, Computational Photography
 and Software-Hardware Co-Design in these applications. Our [solutions on computational photography][SIQPR] has been applied
@@ -18,15 +17,6 @@ I am also a supporter Free/Libre Software and an Open Source developer.
 I was an experienced user of [Arch Linux][archlinux] since 2009, before I betrayed my beliefs and switched to MacBook in 2021.
 I used to be an active member of [TUNA](https://tuna.moe/) and a maintainer of [TUNA mirror site](https://mirrors.tuna.tsinghua.edu.cn).
 Check my [Github profile][github] for more details of my contributions to the open source community.
-
-
-## Contact Me
-
-- Email: `gpg --recv-key 410512A231F391D174BED07F03393A721E7CF75A`
-- Google Scholar: [Yuzhi Wang][gscholar]
-- GitHub: [bigeagle][github]
-- Twitter: [@bigeagle_xd](https://twitter.com/bigeagle_xd)
-- Inoreader: [bigeagle](https://www.inoreader.com/u/bigeagle)
 
 
 [megvii]: https://megvii.com/

@@ -1,29 +1,25 @@
-<section class="section">
+<section class="section pager">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          {{ if .Paginator.HasPrev }}
-          <a class="button" href="{{ .Paginator.Prev.URL }}">
-            <span class="icon is-small is-marginless">
-              {{ partial "svg/icons" "prev" }}
-            </span>
-            Newer
-          </a>
-          {{ end }}
-        </div>
+    <nav class="is-center">
+      <div>
+        {{ if .Paginator.HasPrev }}
+        <a class="button outline dark" href="{{ .Paginator.Prev.URL }}">
+          <span>
+            {{ partial "font-awesome" "prev" }}
+          </span>
+          Newer
+        </a>
+        {{ end }}
       </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          {{ if .Paginator.HasNext }}
-          <a class="button" href="{{ .Paginator.Next.URL }}">
-            Older
-            <span class="icon is-small is-marginless">
-              {{ partial "svg/icons" "next" }}
-            </span>
-          </a>
-          {{ end }}
-        </div>
+      <div>
+        {{ if .Paginator.HasNext }}
+        <a class="button outline dark" href="{{ .Paginator.Next.URL }}">
+          Older
+          <span class="">
+            {{ partial "font-awesome" "next" }}
+          </span>
+        </a>
+        {{ end }}
       </div>
     </nav>
   </div>

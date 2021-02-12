@@ -3,4 +3,5 @@
 node_modules
 db.json
 /public
+/resources
 yarn.lock

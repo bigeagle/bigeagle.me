@@ -1,30 +1,32 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-<section class="section">
-  <div class="container">
-    <div class="subtitle tags is-6 is-pulled-right">
+<section class="container" id="blog-article">
+  <article class="row blog-content">
+    <div class="col text-left date">{{- partial "font-awesome" "calendar" -}}{{ .Date.Format "January 2, 2006" }}</div>
+    <div class="col text-right tags hide-xs">
       {{ if .Params.tags }}
       {{ partial "tags" .Params.tags }}
       {{ end }}
     </div>
-    {{if not .Date.IsZero }}<h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>{{ end }}
-    <h1 class="title">{{ .Title }}</h1>
-    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
-    {{ partial "adsense" . }}
-    {{ end }}
-    <div class="content">
-      {{ .Content }}
-      {{ if .Site.Params.Info.related }}
-      <div class="related">{{ partial "related" . }}</div>
-      {{ end }}
+    <div class="is-full-width"></div>
+    <div class="col">
+      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+      <div class="content">
+        {{ .Content }}
+      </div>
+      <div class="is-full-width"></div>
+      <div class="col tags hide-sm hide-md hide-lg">
+        {{ if .Params.tags }}
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
+      </div>
+      {{ if .Site.Params.Info.related }}<div class="related">{{ partial "related" . }}</div>{{ end }}
     </div>
-    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
-    {{ partial "adsense" . }}
-    {{ end}}
-  </div>
+  </article>
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
-    <script src="/js/copycode.js"></script>
+{{ $copycode_js := resources.Get "js/copycode.js" | minify}}
+<script src="{{ $copycode_js.RelPermalink }}"></script>
 {{ end }}
 {{ partial "disqus" . }}
 {{ partial "footer" . }}

@@ -1,0 +1,18 @@
+{{ if eq "github" . }}
+<i class="fab fa-github"></i>
+{{ else if eq "about" . }}
+<i class="far fa-address-card"></i>
+{{ else if eq "rss" . }}
+<i class="fas fa-rss"></i>
+{{ else if eq "twitter" . }}
+<i class="fab fa-twitter"></i>
+{{ else if eq "prev" . }}
+<i class="fas fa-angle-double-left"></i>
+{{ else if eq "next" . }}
+<i class="fas fa-angle-double-right"></i>
+{{ else if eq "calendar" . }}
+<i class="far fa-calendar-alt"></i>
+{{ else if eq "tags" . }}
+<i class="fas fa-tags"></i>
+{{ else }}
+{{ end }}

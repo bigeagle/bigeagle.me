@@ -1,0 +1,3 @@
+[submodule "assets/external/chota"]
+	path = assets/external/chota
+	url = https://github.com/jenil/chota

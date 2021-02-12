@@ -1,0 +1,22 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section container" id="about-me">
+  <div class="row">
+    <h1 class="col-12 title">{{ .Title }}</h1>
+    <div class="col-4 content">
+      <div class="is-center"><img src="/images/avatar.jpg" class="about-avatar" /></div>
+      <h4>Contact Me</h4> 
+      <ul>
+        <li><i class="far fa-envelope"></i> <span id="my-addr"></span></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/bigeagle">bigeagle</a></li>
+        <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/bigeagle_xd">bigeagle_xd</a></li>
+        <li><i class="fas fa-rss-square"></i> <a href="https://www.inoreader.com/u/bigeagle">bigeagle</a></li>
+      </ul>
+    </div>
+    <div class="col-8 content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
