@@ -266,9 +266,11 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
     # pacman -S gstreamer ffmpeg smplayer
 
 音频
+
     # pacman -S alsa-utils pulseaudio-alsa
 
 把自己加到用户组里
+
     # gpasswd -a yooo audio
     # gpasswd -a yooo video
 
@@ -278,7 +280,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
     # pacman -S wqy-microhei ttf-dejavu ttf-droid cantarell-fonts adobe-source-han-sans-cn-fonts
 
-你应该还需要写带中文的$\TeX$文档，
+你应该还需要写带中文的 $\TeX$ 文档，
 
     # pacman -S texlive-most
     # yaourt -S acroread-fonts-systemwide

@@ -3,7 +3,6 @@ title = "K.I.S.S"
 description = "Keep It Simple, Stupid"
 
 baseURL = "https://bigeagle.me"
-theme = 'kiss'
 copyright = "&copy; <a href=\"https://github.com/bigeagle\"> Justin Wong</a> 2021"
 
 disqusShortname = "bigeagle"
