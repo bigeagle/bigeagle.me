@@ -27,7 +27,7 @@ pre {
 code {
   font-size: 1.4rem;
   color: darken($color-gray, 10%);
-  border: 1px solid darken($bg-secondary-color, 10%);
+  // border: 1px solid darken($bg-secondary-color, 10%);
   padding: 0.1em 0.2em;
   margin: 0 0.1em;
 }
@@ -74,12 +74,13 @@ article.blog-content {
     i {
       margin-right: 1rem;
     }
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
     color: var(--color-darkGrey);
     .tag {
       border-radius: .2em;
       text-transform: unset;
+      padding: 0.4rem;
     }
   }
 

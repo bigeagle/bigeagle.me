@@ -13,9 +13,9 @@ My current research interest includes Low-level Computer Vision, Image Signal Pr
 and Software-Hardware Co-Design in these applications. Our [solutions on computational photography][SIQPR] has been applied
 to various smartphones since 2019.
 
-I am also a supporter Free/Libre Software and an Open Source developer. 
+I am also a supporter of Free/Libre Software. 
 I was an experienced user of [Arch Linux][archlinux] since 2009, before I betrayed my beliefs and switched to MacBook in 2021.
-I used to be an active member of [TUNA](https://tuna.moe/) and a maintainer of [TUNA mirror site](https://mirrors.tuna.tsinghua.edu.cn).
+I developed many open source projects when I was a student member of [TUNA](https://tuna.moe/) and a maintainer of [TUNA mirror site](https://mirrors.tuna.tsinghua.edu.cn).
 Check my [Github profile][github] for more details of my contributions to the open source community.
 
 
