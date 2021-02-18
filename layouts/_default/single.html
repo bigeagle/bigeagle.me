@@ -10,7 +10,7 @@
     </div>
     <div class="is-full-width"></div>
     <div class="col">
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+      <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <div class="content">
         {{ .Content }}
       </div>
