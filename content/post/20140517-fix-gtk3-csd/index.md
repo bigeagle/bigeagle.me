@@ -7,7 +7,7 @@ tags: [linux, ]
 
 GTK3 3.12 之后强制开启了CSD(Client-Side Decoration)，其实这个feature挺好的，但是在平铺式窗口下，GTK3程序的窗口边缘出现了大块留白，极其难看:
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/gtk3-csd.png">}}
+{{<img class="center" src="gtk3-csd.png">}}
 
 
 貌似引起问题的原因是CSD接管了窗口阴影的渲染，窗口管理器就把阴影边缘包括在窗口之内了，

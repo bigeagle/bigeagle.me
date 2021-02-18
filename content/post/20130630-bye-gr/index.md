@@ -4,7 +4,7 @@ date: 2013-06-30 00:00:00
 slug: bye-gr
 comments: true
 ---
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/google_reader2.png">}}
+{{<img class="center" src="google_reader2.png">}}
 
 大约一个月前转向inoreader了，所以最近30天的阅读量很少。
 

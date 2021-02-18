@@ -16,7 +16,7 @@ tags: [life, arts]
 
 设计一下样式，用inkscape画了个。
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/ai_step0.png">}}
+{{<img class="center" src="ai_step0.png">}}
 
 接下来我们开始画Tee。
 
@@ -26,25 +26,25 @@ tags: [life, arts]
 
 对于用惯了鼠标和绘图板的人来说，尤其还是第一次在Tee上画画，直接画出错的概率为1。所以先用粉笔打个草稿（粉笔是从教室偷的，忏悔）……
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/ai_step1.jpg-medium">}}
+{{<img class="center" src="ai_step1.jpg">}}
 
 ## 第2步
 
 用淡色描个轮廓先。
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/ai_step2.jpg-medium">}}
+{{<img class="center" src="ai_step2.jpg">}}
 
 ## 第3步
 
 上色，修饰轮廓。
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/ai_step3.jpg-medium">}}
+{{<img class="center" src="ai_step3.jpg">}}
 
 ## 第4步
 
 继续上色，修饰轮廓，完成。
 
-{{<figure class="center" src="https://dn-bigeagle.qbox.me/images/blog/ai_step4.jpg-medium">}}
+{{<img class="center" src="ai_step4.jpg">}}
 
 
 跟设计稿对比下，颜色偏了…

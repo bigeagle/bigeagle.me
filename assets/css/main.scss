@@ -90,6 +90,13 @@ article.blog-content {
       color: var(--font-color);
     }
   }
+ 
+  figure {
+    &.center > img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
 
 #blogroll {

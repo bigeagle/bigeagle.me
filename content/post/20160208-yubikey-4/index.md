@@ -19,7 +19,7 @@ Yubico One-Time-Password。唯一遗憾的一点是它的 OpenPGP Smartcard 支�
 15 年 11 月 Yubico 又推出了 [YubiKey 4](https://www.yubico.com/2015/11/4th-gen-yubikey-4/)，增加了 4096 位 RSA 加密支持(貌似只有加密，没有签名)，
 加上一些其他原因（后文），时间又正好赶上妹子回国，于是让妹子在 Amazon 买了帮我带了回来。
 
-{{<figure src="https://dn-bigeagle.qbox.me/images/blog/yubikey-4.jpg" class="center">}}
+{{<img src="yubikey-4.jpg" class="center">}}
 
 <!--more-->
 

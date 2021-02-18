@@ -16,7 +16,7 @@ tags:
 
 废话少说，先上王道。
 
-{{<figure src="https://dn-bigeagle.qbox.me/images/blog/vim-screenshot.png" class="center" >}}
+{{<img src="vim-screenshot.png" class="center" >}}
 
 <!--more-->
 
