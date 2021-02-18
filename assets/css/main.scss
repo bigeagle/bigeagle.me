@@ -1,5 +1,8 @@
 $color-gray: #747681;
 $bg-secondary-color: #f3f3f6;
+
+$monokai-fg:  #F8F8F2;
+
 $screen-width-small: 599px;
 $screen-width-medium: 900px;
 $screen-width-large: 1200px;
@@ -25,6 +28,7 @@ pre {
   code {
     border: none;
   }
+  line-height: 1.2;
 }
 
 code {
@@ -72,6 +76,8 @@ p hanla:after {
 }
 
 article.blog-content {
+  counter-reset: figure;
+
   .date {
     i {
       margin-right: 0.5rem;
@@ -121,7 +127,11 @@ article.blog-content {
       &>img, &>video {
         max-width: MIN(100%, 60rem);
       }
-    } 
+    }
+    figcaption::before {
+      counter-increment: figure;
+      content: "图 " counter(figure) ": ";
+    }
   }
 }
 

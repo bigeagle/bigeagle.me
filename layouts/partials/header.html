@@ -15,8 +15,9 @@
 <link href="https://cdn.staticfile.org/KaTeX/0.12.0/katex.min.css" rel="stylesheet">
 {{ $normalize_css := resources.Get "css/normalize.css" }}
 {{ $chota_css := resources.Get "external/chota/src/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
+{{ $syntax_css := resources.Get "css/syntax.css" }}
 {{ $site_css := resources.Get "css/main.scss" | toCSS }}
-{{ $css := slice $normalize_css $chota_css $site_css | resources.Concat "css/bundle.css"}}
+{{ $css := slice $normalize_css $chota_css $syntax_css $site_css | resources.Concat "css/bundle.css"}}
 {{if hugo.IsProduction }}
 {{ $css := $css | resources.Minify }}
 {{ end }}
