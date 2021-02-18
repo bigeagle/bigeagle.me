@@ -19,7 +19,7 @@
 {{ $site_css := resources.Get "css/main.scss" | toCSS }}
 {{ $css := slice $normalize_css $chota_css $syntax_css $site_css | resources.Concat "css/bundle.css"}}
 {{if hugo.IsProduction }}
-{{ $css := $css | resources.Minify }}
+{{ $css = $css | resources.Minify }}
 {{ end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -30,7 +30,7 @@
 {{ $my_js := resources.Get "js/app.js"}}
 {{ $js := slice $katex_js $katex_auto_render_js $autospace_js $my_js | resources.Concat "js/bundle.js" }}
 {{ if hugo.IsProduction }}
-{{ $js := $js | resources.Minify }}
+{{ $js = $js | resources.Minify }}
 {{ end }}
 <script defer src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
 <script defer src="https://cdn.staticfile.org/mermaid/8.9.0/mermaid.min.js"></script>
