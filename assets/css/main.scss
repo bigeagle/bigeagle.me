@@ -1,5 +1,8 @@
 $color-gray: #747681;
 $bg-secondary-color: #f3f3f6;
+$screen-width-small: 599px;
+$screen-width-medium: 900px;
+$screen-width-large: 1200px;
 
 :root {
   --color-primary: #1067D1;
@@ -44,6 +47,13 @@ blockquote {
     }
   }
 }
+
+p hanla:after {
+  content: " ";
+  display: inline;
+  font-size: 0.89em;
+}
+
 
 #topnav {
   .nav-left {
@@ -90,12 +100,28 @@ article.blog-content {
       color: var(--font-color);
     }
   }
+
+  .mermaid {
+  }
  
-  figure {
-    &.center > img {
-      display: block;
-      margin: 0 auto;
+  figure{
+    img, video {
+      max-width: 100%;
     }
+    &.center {
+      &>img, &>video {
+        display: block;
+        margin: 0 auto;
+      }
+      figcaption {
+        text-align: center;
+      }
+    }
+    &.medium-width {
+      &>img, &>video {
+        max-width: MIN(100%, 60rem);
+      }
+    } 
   }
 }
 
