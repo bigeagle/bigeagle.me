@@ -1,0 +1,3 @@
+baseURL = "https://draft.bigeagle.me"
+buildDrafts = true
+publishDir = "draft_public"

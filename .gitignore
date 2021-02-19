@@ -3,5 +3,6 @@
 node_modules
 db.json
 /public
+/draft_public
 /resources
 yarn.lock
