@@ -1,26 +1,27 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-<section class="container" id="blog-article">
-  <article class="row blog-content">
-    <div class="col text-left date">{{- partial "font-awesome" "calendar" -}}{{ .Date.Format "January 2, 2006" }}</div>
-    <div class="col text-right tags hide-xs">
+<section id="blog-article">
+  <article class="blog-content container{{if .Draft}} draft{{ end }}">
+    <div class="row">
+      <div class="col text-left date">{{- partial "font-awesome" "calendar" -}}{{ .Date.Format "January 2, 2006" }}</div>
       {{ if .Params.tags }}
-      {{ partial "tags" .Params.tags }}
+      <div class="col text-right tags hide-xs">{{ partial "tags" .Params.tags }}</div>
       {{ end }}
     </div>
-    <div class="is-full-width"></div>
-    <div class="col">
-      <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
-      <div class="content">
+    <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a></h1>
+    <div class="content">
         {{ .Content }}
-      </div>
-      <div class="is-full-width"></div>
-      <div class="col tags hide-sm hide-md hide-lg">
-        {{ if .Params.tags }}
-        {{ partial "tags" .Params.tags }}
-        {{ end }}
-      </div>
-      {{ if .Site.Params.Info.related }}<div class="related">{{ partial "related" . }}</div>{{ end }}
+    </div>
+    
+    {{ if .Params.tags }}
+    <div class="tags hide-sm hide-md hide-lg">
+      {{ partial "tags" .Params.tags }}
+    </div>
+    {{ end }}
+
+    {{ if .Site.Params.Info.related }}
+    <div class="related">{{ partial "related" . }}</div>
+    {{ end }}
     </div>
   </article>
 </section>

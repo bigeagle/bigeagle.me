@@ -78,6 +78,10 @@ p hanla:after {
 article.blog-content {
   counter-reset: figure;
 
+  &.draft {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='200px' width='200px'><text transform='translate(20, 100) rotate(-45)' fill='rgb(220,220,220)' font-size='20'>DRAFT</text></svg>");
+  }
+
   .date {
     i {
       margin-right: 0.5rem;
@@ -101,7 +105,6 @@ article.blog-content {
   }
 
   .title {
-    margin: 0 0 0.2em 0;
     a {
       color: var(--font-color);
     }
@@ -109,8 +112,16 @@ article.blog-content {
 
   .mermaid {
   }
+
+  .content > figure {
+    margin: 1rem;
+    width: calc(100% - var(--grid-gutter));
+  }
+
  
-  figure{
+  figure {
+    margin: 0;
+    width: 100%;
     img, video {
       max-width: 100%;
     }
@@ -142,7 +153,7 @@ article.blog-content {
     .read-more {
       color: var(--color-grey);
       &:before {
-        content: ">>";
+        content: "»";
       }
     }
   }

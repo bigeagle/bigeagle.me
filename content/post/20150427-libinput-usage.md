@@ -11,6 +11,8 @@ Linput 1.9 总算搞定了这个问题，选择采用硬件内建的加速方案
 如果需要自己调速度，除了设置 `xinput set-float-prop id=X 'libinput Accel Speed' $speed` 
 之外，更底层的方式是给 libinput 提供一个 `LIBINPUT_ATTR_TRACKPOINT_RANGE` 属性。
 
+<!--more-->
+
 通过 
     
     sudo libinput measure trackpoint-range
@@ -67,8 +69,6 @@ Arch 更新之后我们首先关心的是：有没有东西坏掉？很~~幸运~
 trackpoint 的加速参数了。
 
 可是我等不及啊老湿！而且怎么设置参数阿根本找不到在哪里调好不好！
-
-<!--more-->
 
 于是找到[这里](http://who-t.blogspot.com/2014/12/building-a-dpi-database-for-mice.html)，读完发现，原来 libinput 是会通过 udev 的 hwdb 读取
 特定硬件的参数调整，这个第一感觉好麻烦，不能像 xset 那样直接调整，第二感觉就很科学，因为不同鼠标 DPI 不一样，过去每次我把 usb 鼠标插上之后，
