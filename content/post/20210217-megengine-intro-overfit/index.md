@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Fit an Overfit with MegEngine"
-date: 2020-02-17 20:00:00
+date: 2021-02-19 00:00:00
 slug: megengine-intro-overfit
 tags: ["megengine", "ML", "toy"]
 ---
