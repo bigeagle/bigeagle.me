@@ -117,6 +117,23 @@ article.blog-content {
     margin: 1rem;
     width: calc(100% - var(--grid-gutter));
   }
+  
+  /*
+  a.footnote-ref {
+    &::before {
+      content: "["
+    }
+    &::after {
+      content: "]"
+    }
+  }
+  */
+
+  .footnotes {
+    p {
+      margin: 0 0;
+    }
+  }
 
  
   figure {
