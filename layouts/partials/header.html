@@ -24,14 +24,14 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="canonical" href="{{ .Permalink }}">
-{{ $katex_js := resources.Get "external/katex-0.12.0/katex.js"}}
-{{ $katex_auto_render_js := resources.Get "external/katex-0.12.0/auto-render.js"}}
 {{ $autospace_js := resources.Get "js/text-autospace.js"}}
 {{ $my_js := resources.Get "js/app.js"}}
-{{ $js := slice $katex_js $katex_auto_render_js $autospace_js $my_js | resources.Concat "js/bundle.js" }}
+{{ $js := slice $autospace_js $my_js | resources.Concat "js/bundle.js" }}
 {{ if hugo.IsProduction }}
 {{ $js = $js | resources.Minify }}
 {{ end }}
+<script defer src="https://cdn.staticfile.org/KaTeX/0.12.0/katex.min.js"></script>
+<script defer src="https://cdn.staticfile.org/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
 <script defer src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
 <script defer src="https://cdn.staticfile.org/mermaid/8.9.0/mermaid.min.js"></script>
 <script defer src="{{ $js.RelPermalink }}"></script>
