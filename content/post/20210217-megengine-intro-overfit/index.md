@@ -14,9 +14,10 @@ tags: ["megengine", "ML", "toy"]
 
 ## 关于 MegEngine
 
-[MegEngine][MegEngine] 是旷视主导开发的一个开源深度学习框架，它的前身 [MegBrain][gh-mgb] 自 2014 年开始开发，[设计先进][kai-zhihu]，2015 起旷视几乎每个都在用，
-并且经受住了各种奇怪生产场景的考验，相当靠谱。
-2019 年底，公司决定将 MegBrain 开源，开源版的 Python 前端经过完全重新设计，更加合理，也和<ruby>主流框架<rt> PyTorch </rt></ruby>更接近，上手更容易一些。
+[MegEngine][MegEngine] 是旷视主导开发的一个开源深度学习框架，它的前身 [MegBrain][gh-mgb] 自 2014 年开始开发，[设计先进][kai-zhihu]，
+2015 年起旷视几乎每个炼丹师在每个业务上都在用，并且经受住了各种奇怪生产场景的考验，相当靠谱。
+2019 年底，公司决定将 MegBrain 开源，开源版产品进行了重新整合， 更名为 MegEngine。
+它的 Python 前端经过完全重新设计，更加合理，也和<ruby>主流框架<rt> PyTorch </rt></ruby>更接近，上手更容易一些。
 
 由于老 MegBrain 是个纯静态图框架，MegEngine 则主推动态图，整个 2020 年，开发团队对于如何做好“动静合一”经过了多次大重构，直到 2020 年 11 月才收敛底层设计。
 再经过两个月施工, 最近发布的 [1.2 版][mge-1.2] 的动态图部分完成度已经相当高，旷视内部的一些生产应用也开始逐渐向 MegEngine 迁移。关于这部分具体的设计和实现，
@@ -99,7 +100,7 @@ plot_scatter(b['data'][:, 1], b['data'][:, 0], b['label'])
 
 ### 配方
 
-我们搭一个包含三个隐层和一个输出层的多层感知机(MLP)结构，具体代码就不解释了，API 风格和 pytorch 长得很像，并且[文档][mge-net-build]中讲得很详细。
+我们搭一个包含三个隐层和一个输出层的多层感知机(MLP)结构，具体代码就不解释了，API 风格和 pytorch 基本一致，并且[文档][mge-net-build]中讲得很详细。
 
 ```python
 import megengine as mge
