@@ -103,6 +103,7 @@ plot_scatter(b['data'][:, 1], b['data'][:, 0], b['label'])
 
 ```python
 import megengine as mge
+import megengine.functional as F
 import megengine.module as M
 
 def FullyConnected(in_features, out_features, activation='RELU'):
