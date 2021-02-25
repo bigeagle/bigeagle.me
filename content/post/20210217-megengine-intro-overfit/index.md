@@ -182,8 +182,8 @@ for step, batch in enumerate(train_ds):
 {{<img class="center" src="relu_no_normalize.png">}}
 
 仔细想一下，我们生成的数据输入数值范围和 OVERFIT 图像尺寸是一致的，横向大约在 $[0, 1000]$ 纵向大约在 $[0, 300]$，
-而我们期望网络的输出是一个二分类概率分布，数值范围是 $[0, 1]$，常见的网络初始化方法都是根据“方差不变”原则[^xavier]设计的，
-而我们的数据输入输出数值范围差异过大，网络很难学出来。
+而使用梯度下降的神经网络算法一般需要将数据做好归一化才有助于收敛，我们的输入数据没有做好归一化(normalization)，造成了来回震荡的输出。这部分知识可以看看 Lecun 在我小学二年级时的[研究](lecun98b)，推导过程留作课后作业。
+
 
 解决方法很简单，数据输入网络前手动归一化到 $[-1, 1]$ 即可。这里不需要很严格，和 $1$ 在一个数量级内基本都可以收敛。在训练代码中加一小段:
 ```python
@@ -204,7 +204,7 @@ inp = mge.tensor(batch['data']) / scaler + offset
 </div>
 </div>
 
-还可以试试更多的激活函数，比如 $\cos(\cdot)$，由于 $\cos$ 是一个周期函数并且能构成一组正交基(傅立叶变换)，用来拟合 "OVERFIT" 这种奇葩分布也挺好的。
+还可以试试更多的激活函数，比如 $\cos(\cdot)$，由于 $\cos$ 是一个[周期函数][vincent2020]并且能构成一组正交基(傅立叶变换)，用来拟合 "OVERFIT" 这种奇葩分布也挺好的。
 不过 $\cos$ 的周期范围是 $[-\pi, \pi]$，如果我们沿用 $[-1, 1]$ 归一化(图5)的话就得等网络慢慢收敛过去，所以不妨试试归一化到 $[-3, 3]$ (图6)，
 可以看到收敛速度明显加快。
 
@@ -221,7 +221,7 @@ inp = mge.tensor(batch['data']) / scaler + offset
 仔细看这些网络的收敛过程，也不难发现它先学出低频结构，后学高频细节。最先拟合上的是“中间是文字、四周是背景”，其次是 OVERTIT 文字中上下和中间密集，其他地方比较稀疏，
 最后才拟合上各种笔画细节。这个过程也和[学界的研究结论](https://zhuanlan.zhihu.com/p/42847582)一致。
 
-折腾这么多，上个大招。刚才提到归一化对网络收敛影响很大，并且归一化的数值范围有一些经验性，并且很容易预想到，越深的网络数值范围越容易发散，有没有更靠谱的归一化的方法？
+折腾这么多，上个大招。刚才提到归一化对网络收敛影响很大，并且归一化的数值范围有一些经验性，并且很容易预想到，越深的网络调参越困难，那有没有更简单靠谱的归一化的方法？
 有，[Batch Normalization](https://arxiv.org/abs/1502.03167)。
 
 ```python
@@ -240,8 +240,7 @@ def FullyConnected(in_features, out_features, activation='RELU'):
 
 ## 小结
 
-本文从炼丹三要素开始讲了点炼丹方面的基本概念，基于 MegEngine 做了个炼丹小实验，并且演示了一些基本的调参和模型调整。从 OVERFIT 实验中可以看出来数据归一化以及模型结构都能
-显著影响模型性能。
+本文从炼丹三要素开始讲了点炼丹方面的基本概念，基于 MegEngine 做了个炼丹小实验，并且演示了一些基本的调参和模型调整。从 OVERFIT 实验中可以看出来数据归一化以及模型结构都能显著影响模型性能。
 
 聊完炼丹，下一次讲讲怎么服药。这也是 MegEngine 有别于 PyTorch, Tensorflow 等框架的特色之一：动静合一、高性能推理。
 
@@ -257,7 +256,7 @@ p.s. 服药相关的一部分代码还在重构中，鸽不鸽主要看 MegEngin
 [mge-gm]: https://megengine.org.cn/doc/basic/basic_concepts.html#grad-manager
 [mge-opt]: https://megengine.org.cn/doc/basic/train_and_evaluation.html#id4
 [mge-net-build]: https://megengine.org.cn/doc/basic/network_build.html
-[xavier-init]: http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf
+[lecun-98b]: http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf
+[vincent2020]: http://arxiv.org/abs/2006.09661 
 
-[^xavier]: 参考 [Xavier 初始化][xavier-init]
-[^bn]: 其实还有很多关于归一化的研究，尤其是在BN不适用的场景中。还有一波人在研究如何[不带BN也能训练](https://arxiv.org/abs/2102.06171)深层网络。
+[^bn]: 其实还有很多关于归一化的研究，尤其是在BN不适用的场景中。还有一波人在研究如何[不带BN也能训练](https://arxiv.org/abs/1901.09321)深层网络。
