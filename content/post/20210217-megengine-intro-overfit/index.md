@@ -182,7 +182,7 @@ for step, batch in enumerate(train_ds):
 {{<img class="center" src="relu_no_normalize.png">}}
 
 仔细想一下，我们生成的数据输入数值范围和 OVERFIT 图像尺寸是一致的，横向大约在 $[0, 1000]$ 纵向大约在 $[0, 300]$，
-而使用梯度下降的神经网络算法一般需要将数据做好归一化才有助于收敛，我们的输入数据没有做好归一化(normalization)，造成了来回震荡的输出。这部分知识可以看看 Lecun 在我小学二年级时的[研究](lecun98b)，推导过程留作课后作业。
+而使用梯度下降的神经网络算法一般需要将数据做好归一化才有助于收敛，我们的输入数据没有做好归一化(normalization)，造成了来回震荡的输出。这部分知识可以看看 Lecun 在我小学二年级时的[研究][lecun98b]，推导过程留作课后作业。
 
 
 解决方法很简单，数据输入网络前手动归一化到 $[-1, 1]$ 即可。这里不需要很严格，和 $1$ 在一个数量级内基本都可以收敛。在训练代码中加一小段:
@@ -256,7 +256,7 @@ p.s. 服药相关的一部分代码还在重构中，鸽不鸽主要看 MegEngin
 [mge-gm]: https://megengine.org.cn/doc/basic/basic_concepts.html#grad-manager
 [mge-opt]: https://megengine.org.cn/doc/basic/train_and_evaluation.html#id4
 [mge-net-build]: https://megengine.org.cn/doc/basic/network_build.html
-[lecun-98b]: http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf
+[lecun98b]: http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf
 [vincent2020]: http://arxiv.org/abs/2006.09661 
 
 [^bn]: 其实还有很多关于归一化的研究，尤其是在BN不适用的场景中。还有一波人在研究如何[不带BN也能训练](https://arxiv.org/abs/1901.09321)深层网络。
