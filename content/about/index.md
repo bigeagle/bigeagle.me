@@ -3,7 +3,7 @@ title: "About Me"
 layout: aboutme
 ---
 
-I am a research engineer at [Megvii Research](https://megvii.com/). 
+I am a research engineer at [Megvii Research](https://research.megvii.com/). 
 Previously I was a postdoctoral researcher at [Dept. of CS][DCST], Tsinghua University.
 I received my Ph.D. in Electronic Engineering at [NICS lab][DEE], Tsinghua University in 2017,
 supervised by Prof. [Huazhong Yang][yanghz] and Prof. [Yu Wang][yuwang]. Before that, I received my
