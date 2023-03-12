@@ -6,3 +6,4 @@ db.json
 /draft_public
 /resources
 yarn.lock
+.hugo_build.lock
