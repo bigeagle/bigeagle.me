@@ -43,7 +43,7 @@ N-Gram 是一种经典的语言模型，不加公式地解释就是：“当前�
 ```python
 end = torch.randint(len(text)-1)
 context = text[end-N:end]
-target = text[end+1]
+target = text[end]
 print(f"when text is {context}, target is {target}")
 ```
 任意取一段长度为N的文本 context 和它的后续字符 target，那么 `<context, target>` 就是 N-gram 模型的一个**样本**。基于深度学习的语言模型学习，就是从大量这样的样本中，尝试拟合出语言本身的概率分布，进而就可以使用采样方法，一本正经地胡说八道了。
