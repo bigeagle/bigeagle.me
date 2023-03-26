@@ -12,7 +12,7 @@
 <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 {{ end }}
 <link href="https://cdn.staticfile.org/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.staticfile.org/KaTeX/0.12.0/katex.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" rel="stylesheet">
 {{ $normalize_css := resources.Get "css/normalize.css" }}
 {{ $chota_css := resources.Get "external/chota/src/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
 {{ $syntax_css := resources.Get "css/syntax.css" }}
@@ -30,8 +30,8 @@
 {{ if hugo.IsProduction }}
 {{ $js = $js | resources.Minify }}
 {{ end }}
-<script defer src="https://cdn.staticfile.org/KaTeX/0.12.0/katex.min.js"></script>
-<script defer src="https://cdn.staticfile.org/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
+<script defer src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script defer src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
 <script defer src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
 <script defer src="https://cdn.staticfile.org/mermaid/8.9.0/mermaid.min.js"></script>
 <script defer src="{{ $js.RelPermalink }}"></script>
