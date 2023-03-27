@@ -1,10 +1,10 @@
 <footer class="copy-right">
   <div class="container">
     <div class="is-full-width is-center">
-    <p>&copy; {{ .Site.Copyright | safeHTML }} 2010-{{ now.Format "2006" }}</p>
+      <p>&copy; {{ .Site.Copyright | safeHTML }} 2010-{{ now.Format "2006" }}</p>
     </div>
     {{if .Site.Params.Info.poweredby}}
-    <div class="is-full-width is-center"><p>Powered by <a href="https://gohugo.io/">Hugo</a>.</div>
+    <div class="is-full-width is-center"><p>Powered by <a href="https://gohugo.io/">Hugo</a>. Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div>
     {{ end }}
   </div>
 </footer>
