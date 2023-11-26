@@ -9,12 +9,14 @@
 <title>{{ .Site.Params.Info.homeTitle }}</title>
 {{ end }}
 {{ if .Site.Params.rss }}
-<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+{{- with .OutputFormats.Get "RSS" -}}
+<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}"	href="{{ .RelPermalink }}"/>
+{{- end -}}
 {{ end }}
 <link href="https://cdn.staticfile.org/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" rel="stylesheet">
 {{ $normalize_css := resources.Get "css/normalize.css" }}
-{{ $chota_css := resources.Get "external/chota/src/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
+{{ $chota_css := resources.Get "external/chota/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
 {{ $syntax_css := resources.Get "css/syntax.css" }}
 {{ $site_css := resources.Get "css/main.scss" | toCSS }}
 {{ $css := slice $normalize_css $chota_css $syntax_css $site_css | resources.Concat "css/bundle.css"}}
