@@ -3,6 +3,7 @@ title: 'macOS 按域名切换 DNS 解析'
 date: 2023-11-26 00:00:00
 comments: true
 slug: mac-dns-resolver
+tags: ["macOS", "DNS", "network"]
 ---
 
 在工作用的电脑上，为了访问公司内网，需要让内网域名走公司的 DNS 服务器，而其他域名走公共 DNS 服务器。
