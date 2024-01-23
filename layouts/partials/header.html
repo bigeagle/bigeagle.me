@@ -13,10 +13,10 @@
 <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}"	href="{{ .RelPermalink }}"/>
 {{- end -}}
 {{ end }}
-<link href="https://cdn.staticfile.org/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet">
 {{ $normalize_css := resources.Get "css/normalize.css" }}
-{{ $chota_css := resources.Get "external/chota/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
+{{ $chota_css := resources.Get "external/chota/src/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
 {{ $syntax_css := resources.Get "css/syntax.css" }}
 {{ $site_css := resources.Get "css/main.scss" | toCSS }}
 {{ $css := slice $normalize_css $chota_css $syntax_css $site_css | resources.Concat "css/bundle.css"}}
@@ -32,10 +32,11 @@
 {{ if hugo.IsProduction }}
 {{ $js = $js | resources.Minify }}
 {{ end }}
-<script defer src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
-<script defer src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
-<script defer src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
-<script defer src="https://cdn.staticfile.org/mermaid/8.9.0/mermaid.min.js"></script>
+
+<script defer src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.js"></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/contrib/auto-render.min.js"></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/mermaid/10.4.0/mermaid.min.js"></script>
 <script defer src="{{ $js.RelPermalink }}"></script>
 </head>
 <body>
