@@ -8,14 +8,5 @@
     {{ end }}
   </div>
 </footer>
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-{{ if .Site.Params.matomoAnalytics }}
-{{- partial "analytics/matomo" . -}}
-{{ end }}
-{{ if .Site.Params.fathomAnalytics }}
-{{- partial "analytics/fathom" . -}}
-{{ end }}
 </body>
 </html>
