@@ -16,7 +16,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet">
 {{ $normalize_css := resources.Get "css/normalize.css" }}
-{{ $chota_css := resources.Get "external/chota/src/chota.css" | resources.PostCSS (dict "inlineImports" "true" ) }}
+{{ $chota_css := resources.Get "external/chota/src/chota.css" | css.PostCSS (dict "inlineImports" "true" ) }}
 {{ $syntax_css := resources.Get "css/syntax.css" }}
 {{ $site_css := resources.Get "css/main.scss" | toCSS }}
 {{ $css := slice $normalize_css $chota_css $syntax_css $site_css | resources.Concat "css/bundle.css"}}
