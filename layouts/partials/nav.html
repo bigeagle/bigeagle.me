@@ -8,7 +8,7 @@
           {{- $social := ( .Site.Params.social ) -}}
           {{- range $platform := $social.config.platforms -}}
           {{- with $username := ( index $social $platform ) -}}
-          <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
+          <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index hugo.Data.theme.social.base $platform ) $username }}'
                                 target='_blank' rel='noopener'>
             {{- partial "font-awesome" $platform -}}
           </a>
